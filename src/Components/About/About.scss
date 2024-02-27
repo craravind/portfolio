@@ -1,0 +1,40 @@
+$AB-Topics-col:hsl(0 0% 100% / 0.2);
+$AB-Intro-col: #ffffffa2;
+$AB-Para-col:#ffffff72;
+$Special-grade:#fff;
+
+.About{
+    max-width: 100%;
+    min-width: 20rem;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    .Ab-Container{
+        max-inline-size: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        .Ab-Topic{
+            align-self: flex-start;
+            font-size: 3em;
+            color: $AB-Topics-col;
+            padding: 5px 25px;
+        }
+        .Ab-Intro{
+            width: 85%;
+            font-size: 1em;
+            color:$AB-Intro-col ;
+        }
+        .Intro-Para{
+            width: 90%;
+            color: $AB-Topics-col;
+            text-align: left;
+        }
+        .specialgrade{
+            color: $Special-grade;
+            text-decoration: underline;
+        }
+    }
+}

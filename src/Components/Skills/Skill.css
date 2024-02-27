@@ -1,0 +1,97 @@
+.Skills {
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Skills .Sk-Topic {
+  align-self: flex-end;
+  padding: 5px 25px;
+}
+.Skills .Sk-Topic .Topic-Title {
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.062745098);
+}
+.Skills .Sk-Container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+  place-items: center;
+  gap: 1em 3em;
+  position: relative;
+}
+.Skills .Sk-Container .Icons {
+  min-width: 200px;
+  min-height: 200px;
+  background-color: aliceblue;
+  width: 10px;
+  background-color: rgba(52, 52, 52, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 15px;
+  position: relative;
+  color: #fff;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.Skills .Sk-Container .Icons .img {
+  filter: drop-shadow(0px 0px 5px rgba(116, 116, 116, 0.2));
+  width: 5em;
+  z-index: 99;
+  position: relative;
+}
+.Skills .Sk-Container .Icons .LevelIndicate {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(220deg, rgba(245, 245, 245, 0.2) 10%, rgba(0, 0, 0, 0.5));
+  opacity: 0.5;
+  position: absolute;
+  transition: 600ms linear;
+  border-radius: 10px;
+  transform: rotate(-90Deg);
+  display: flex;
+  align-items: end;
+}
+.Skills .Sk-Container .Icons .LevelIndicate .Level {
+  font-size: 1.1rem;
+  align-items: flex-end;
+  color: #fff;
+  padding: 5px 15px;
+  position: relative;
+}
+.Skills .Sk-Container .Icons .IconName {
+  position: relative;
+}
+.Skills .Sk-Container .Icons .IconName::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  border-radius: 15px;
+  transition: 500ms linear;
+}
+.Skills .Icons:hover .img {
+  filter: drop-shadow(1px 1px 12px rgba(255, 255, 255, 0.776));
+}
+.Skills .Icons:hover .LevelIndicate {
+  opacity: 1;
+  background: rgb(70, 70, 70);
+}
+.Skills .Icons:hover .LevelIndicate .Level {
+  color: #fff;
+}
+.Skills .Icons:hover .IconName {
+  color: #fff;
+}
+.Skills .Icons:hover .IconName::after {
+  width: 100%;
+}/*# sourceMappingURL=Skill.css.map */

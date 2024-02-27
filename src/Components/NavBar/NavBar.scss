@@ -1,0 +1,246 @@
+$header-bg: transparent;
+$Header-bg-scroll:linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+$nav-bg: transparent;
+
+// Logo
+$Logo-fs: 2em;
+$Logo-col-bfScroll: #ffffff;
+$Logo-col-afScroll: #ffffff;
+
+//Option
+$Option-bg-col :  rgba(0, 0, 0, 0.7);
+$Link-col: #fff;
+$Links-unlinke-col:rgb(255, 255, 255);
+$Links-hover-col:#ffffff4f;
+
+// Menu bar Open and close
+$MenuLinks-color: #fff;
+$MenuLinks-hov-color: #ffffff50;
+$Menu-bg-media: #000000d7;
+
+
+$MenuLink-hov-bg: #ffffff;
+$OpenBars-bg: #fff;
+$CloseBar-bg: #fff;
+$CloseBar-col: red;
+$CloseBar-hov-bg: red;
+$CloseBar-hov-col: #fff;
+
+
+@font-face {
+    font-family: 'Lobster', sans-serif;
+    font-family: 'Style Script', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Lobster&family=Style+Script&display=swap');
+}
+.header,
+.Header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    transition: all 0.3s linear;
+    .ha-container {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .ContainsLogo {
+            align-self: flex-start;
+            position: absolute;
+            padding: 5px 15px;
+            .Logo {
+                color: $Logo-col-bfScroll;
+                font-family: 'Lobster';
+            }
+        }
+        .options,
+        .Options {
+            align-self: flex-end;
+            position: fixed;
+            width: 40%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+            background-color: $Option-bg-col;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            transform: translate(350px);
+            .option {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+                list-style: none;
+                .Links {
+                    color: $Link-col;
+                    cursor: pointer;
+                    position: relative;
+                }
+            }
+        }
+        .Options {
+            transform: translate(0px);
+        }
+        .Links::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            background:$Links-unlinke-col ;
+            bottom: -3px;
+            left: 0;
+            border-radius: 15px;
+            transition: all 500ms linear;
+        }
+        .Links:hover:after {
+            width: 100%;
+        }
+        .Links:active:after {
+            transform: translateY(10px) scale(1.5, 1.5);
+        }
+        .Links:hover {
+            color: $Links-hover-col;
+        }
+        .MenuBar,
+        .MenuBars {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 15px;
+            .OpenMenu {
+                width: 2em;
+                height: 2em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.2em;
+                .bar {
+                    width: 90%;
+                    height: 5px;
+                    background: $OpenBars-bg;
+                    border-radius: 15px;
+                    transition: 500ms ease-in-out;
+                }
+                .bar1 {
+                    width: 50%;
+                    align-self: self-start;
+                }
+                .bar2 {
+                    width: 50%;
+                }
+                .bar3 {
+                    width: 50%;
+                    align-self: self-end;
+                }
+            }
+            .OpenMenu:hover {
+                .bar {
+                    width: 90%;
+                }
+            }
+            .CloseMenu {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $CloseBar-bg;
+                border-radius: 15px;
+                .Close {
+                    width: 90%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $CloseBar-col;
+                    font-size: 1.2em;
+                }
+            }
+            .CloseMenu:hover {
+                background-color: $CloseBar-hov-bg;
+                .Close {
+                    color: $CloseBar-hov-col;
+                }
+            }
+        }
+        .box{
+            align-self: flex-end;
+            z-index: 999;
+            height: 90%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            outline: none;
+        }
+        .MenuBars {
+            align-self: flex-end;
+            display: flex;
+            transform: translateX(0px);
+            transition: all 500ms ease-in-out;
+            outline: none;
+
+            .OpenMenu {
+                display: flex;
+            }
+            .CloseMenu {
+                transition: all 500ms linear;
+                display: none;
+            }
+        }
+        .MenuBar {
+            align-self: flex-start;
+            transform: translateX(-30%);
+            transition: all 500ms ease-in-out;
+            display: flex;
+            z-index: 999;
+            outline: none;
+
+            .OpenMenu {
+                transition: all 500ms linear;
+                display: none;
+            }
+            .CloseMenu {
+                display: flex;
+            }
+        }
+    }
+}
+.Header {
+    background: $Header-bg-scroll;
+    background-blend-mode: multiply,multiply;
+    .ha-container {
+        .ContainsLogo {
+            .Logo {
+                color: $Logo-col-afScroll;
+            }
+        }
+        .MenuBar,
+        .MenuBars {
+            .OpenMenu {
+                .bar {
+                    background-color:$OpenBars-bg;
+                }
+            }
+            .CloseMenu {
+                background-color: $CloseBar-bg;
+                .Close {
+                    color: $CloseBar-col;
+                }
+            }
+        }
+    }
+}

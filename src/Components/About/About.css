@@ -1,0 +1,35 @@
+.About {
+  max-width: 100%;
+  min-width: 20rem;
+  display: grid;
+  place-items: center;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+.About .Ab-Container {
+  max-inline-size: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.About .Ab-Container .Ab-Topic {
+  align-self: flex-start;
+  font-size: 3em;
+  color: hsla(0, 0%, 100%, 0.2);
+  padding: 5px 25px;
+}
+.About .Ab-Container .Ab-Intro {
+  width: 85%;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.6352941176);
+}
+.About .Ab-Container .Intro-Para {
+  width: 90%;
+  color: hsla(0, 0%, 100%, 0.2);
+  text-align: left;
+}
+.About .Ab-Container .specialgrade {
+  color: #fff;
+  text-decoration: underline;
+}/*# sourceMappingURL=About.css.map */

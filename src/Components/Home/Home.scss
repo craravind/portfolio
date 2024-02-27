@@ -1,0 +1,120 @@
+// Profile
+$Profile-bg :rgb(108, 108, 108);
+$Profile-img-col : #fff;
+$Profile-img-bg: rgba(255, 255, 255, 0.3);
+$Profile-Name-col: #fff;
+$Profile-Role-col:#ffffff86;
+
+// Info
+$Info-bg: #fff;
+$Info-btn-bg: #000;
+$info-btn-col: #fff;
+// Details
+$details-col:rgba(0, 0, 0, 0.6);
+
+.Home{
+    width: 75%;
+    height: 28em;
+    display: flex;
+    .Card{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr repeat(5, 0.5fr) 0.2fr;
+        grid-template-areas:
+            "Top"
+            "Middle"
+            "Middle"
+            "Middle"
+            "Middle"
+            "Middle"
+            "Bottom";
+        place-items:center ;
+        .Profile{
+            grid-area: Top;
+            grid-row: 1 / span 3;
+            width: 95%;
+            height: 95%;
+            background-color: $Profile-bg;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            border-radius: 15px;
+            .Profile-img{
+                width: 1.5em;
+                height: 1.5em;
+                background-color: $Profile-img-bg;
+                color: $Profile-img-col;
+                font-size: 3em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 35px;
+            }
+            .Profile-Name{
+                color: $Profile-Name-col;
+            }
+            .Profile-Role{
+                color: $Profile-Role-col;
+            }
+        }
+        .Info{
+            grid-area: Middle;
+            grid-row: 2 / span 5;
+            width: 100%;
+            height: 90%;
+            background-color: $Info-bg;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 0.5fr);
+            align-items: center;
+            justify-content: center;
+            .InfoBtns{
+                grid-row: 3 / span 1;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                gap: 1em;
+                .ResumeBtn:hover:active{
+                    .ResumeIcon{
+                        animation: Download 1000ms linear;
+                        animation-iteration-count: 8;
+                    }
+                }
+                .InfoBtn{
+                    width: 30%;
+                    background-color: $Info-btn-bg;
+                    padding: 8px 15px;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5em;
+                    color: $info-btn-col;
+                    text-decoration: none;
+                }
+            }
+            .Details{
+                max-width: 100%;
+                grid-row: 4 / span 2;
+                align-self: baseline;
+                padding: 5px 15px;
+                color: $details-col;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@keyframes Download {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}

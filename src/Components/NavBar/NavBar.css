@@ -1,0 +1,263 @@
+@font-face {
+  font-family: "Lobster", sans-serif;
+  font-family: "Style Script", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Lobster&family=Style+Script&display=swap");
+}
+.header,
+.Header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.3s linear;
+}
+.header .ha-container,
+.Header .ha-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header .ha-container .ContainsLogo,
+.Header .ha-container .ContainsLogo {
+  align-self: flex-start;
+  position: absolute;
+  padding: 5px 15px;
+}
+.header .ha-container .ContainsLogo .Logo,
+.Header .ha-container .ContainsLogo .Logo {
+  color: #ffffff;
+  font-family: "Lobster";
+}
+.header .ha-container .options,
+.header .ha-container .Options,
+.Header .ha-container .options,
+.Header .ha-container .Options {
+  align-self: flex-end;
+  position: fixed;
+  width: 40%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  transform: translate(350px);
+}
+.header .ha-container .options .option,
+.header .ha-container .Options .option,
+.Header .ha-container .options .option,
+.Header .ha-container .Options .option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+}
+.header .ha-container .options .option .Links,
+.header .ha-container .Options .option .Links,
+.Header .ha-container .options .option .Links,
+.Header .ha-container .Options .option .Links {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.header .ha-container .Options,
+.Header .ha-container .Options {
+  transform: translate(0px);
+}
+.header .ha-container .Links::after,
+.Header .ha-container .Links::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  bottom: -3px;
+  left: 0;
+  border-radius: 15px;
+  transition: all 500ms linear;
+}
+.header .ha-container .Links:hover:after,
+.Header .ha-container .Links:hover:after {
+  width: 100%;
+}
+.header .ha-container .Links:active:after,
+.Header .ha-container .Links:active:after {
+  transform: translateY(10px) scale(1.5, 1.5);
+}
+.header .ha-container .Links:hover,
+.Header .ha-container .Links:hover {
+  color: rgba(255, 255, 255, 0.3098039216);
+}
+.header .ha-container .MenuBar,
+.header .ha-container .MenuBars,
+.Header .ha-container .MenuBar,
+.Header .ha-container .MenuBars {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+}
+.header .ha-container .MenuBar .OpenMenu,
+.header .ha-container .MenuBars .OpenMenu,
+.Header .ha-container .MenuBar .OpenMenu,
+.Header .ha-container .MenuBars .OpenMenu {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+}
+.header .ha-container .MenuBar .OpenMenu .bar,
+.header .ha-container .MenuBars .OpenMenu .bar,
+.Header .ha-container .MenuBar .OpenMenu .bar,
+.Header .ha-container .MenuBars .OpenMenu .bar {
+  width: 90%;
+  height: 5px;
+  background: #fff;
+  border-radius: 15px;
+  transition: 500ms ease-in-out;
+}
+.header .ha-container .MenuBar .OpenMenu .bar1,
+.header .ha-container .MenuBars .OpenMenu .bar1,
+.Header .ha-container .MenuBar .OpenMenu .bar1,
+.Header .ha-container .MenuBars .OpenMenu .bar1 {
+  width: 50%;
+  align-self: self-start;
+}
+.header .ha-container .MenuBar .OpenMenu .bar2,
+.header .ha-container .MenuBars .OpenMenu .bar2,
+.Header .ha-container .MenuBar .OpenMenu .bar2,
+.Header .ha-container .MenuBars .OpenMenu .bar2 {
+  width: 50%;
+}
+.header .ha-container .MenuBar .OpenMenu .bar3,
+.header .ha-container .MenuBars .OpenMenu .bar3,
+.Header .ha-container .MenuBar .OpenMenu .bar3,
+.Header .ha-container .MenuBars .OpenMenu .bar3 {
+  width: 50%;
+  align-self: self-end;
+}
+.header .ha-container .MenuBar .OpenMenu:hover .bar,
+.header .ha-container .MenuBars .OpenMenu:hover .bar,
+.Header .ha-container .MenuBar .OpenMenu:hover .bar,
+.Header .ha-container .MenuBars .OpenMenu:hover .bar {
+  width: 90%;
+}
+.header .ha-container .MenuBar .CloseMenu,
+.header .ha-container .MenuBars .CloseMenu,
+.Header .ha-container .MenuBar .CloseMenu,
+.Header .ha-container .MenuBars .CloseMenu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.header .ha-container .MenuBar .CloseMenu .Close,
+.header .ha-container .MenuBars .CloseMenu .Close,
+.Header .ha-container .MenuBar .CloseMenu .Close,
+.Header .ha-container .MenuBars .CloseMenu .Close {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 1.2em;
+}
+.header .ha-container .MenuBar .CloseMenu:hover,
+.header .ha-container .MenuBars .CloseMenu:hover,
+.Header .ha-container .MenuBar .CloseMenu:hover,
+.Header .ha-container .MenuBars .CloseMenu:hover {
+  background-color: red;
+}
+.header .ha-container .MenuBar .CloseMenu:hover .Close,
+.header .ha-container .MenuBars .CloseMenu:hover .Close,
+.Header .ha-container .MenuBar .CloseMenu:hover .Close,
+.Header .ha-container .MenuBars .CloseMenu:hover .Close {
+  color: #fff;
+}
+.header .ha-container .box,
+.Header .ha-container .box {
+  align-self: flex-end;
+  z-index: 999;
+  height: 90%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  outline: none;
+}
+.header .ha-container .MenuBars,
+.Header .ha-container .MenuBars {
+  align-self: flex-end;
+  display: flex;
+  transform: translateX(0px);
+  transition: all 500ms ease-in-out;
+  outline: none;
+}
+.header .ha-container .MenuBars .OpenMenu,
+.Header .ha-container .MenuBars .OpenMenu {
+  display: flex;
+}
+.header .ha-container .MenuBars .CloseMenu,
+.Header .ha-container .MenuBars .CloseMenu {
+  transition: all 500ms linear;
+  display: none;
+}
+.header .ha-container .MenuBar,
+.Header .ha-container .MenuBar {
+  align-self: flex-start;
+  transform: translateX(-30%);
+  transition: all 500ms ease-in-out;
+  display: flex;
+  z-index: 999;
+  outline: none;
+}
+.header .ha-container .MenuBar .OpenMenu,
+.Header .ha-container .MenuBar .OpenMenu {
+  transition: all 500ms linear;
+  display: none;
+}
+.header .ha-container .MenuBar .CloseMenu,
+.Header .ha-container .MenuBar .CloseMenu {
+  display: flex;
+}
+
+.Header {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
+  background-blend-mode: multiply, multiply;
+}
+.Header .ha-container .ContainsLogo .Logo {
+  color: #ffffff;
+}
+.Header .ha-container .MenuBar .OpenMenu .bar,
+.Header .ha-container .MenuBars .OpenMenu .bar {
+  background-color: #fff;
+}
+.Header .ha-container .MenuBar .CloseMenu,
+.Header .ha-container .MenuBars .CloseMenu {
+  background-color: #fff;
+}
+.Header .ha-container .MenuBar .CloseMenu .Close,
+.Header .ha-container .MenuBars .CloseMenu .Close {
+  color: red;
+}/*# sourceMappingURL=NavBar.css.map */
